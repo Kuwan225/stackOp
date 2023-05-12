@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Josefin+Slab:wght@700&family=Kufam:wght@400;500;600;700;800;900&family=Laila:wght@300;400;500;600;700&display=swap');
+
+@import 'antd/dist/reset.css';
+
+@tailwind components;
+@tailwind utilities;
+
+.text-primary {
+    font-family: 'Laila', sans-serif;
+}
