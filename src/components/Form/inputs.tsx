@@ -2,21 +2,28 @@ import { InputProps } from "../types/Form/inputs.type";
 import { Input } from "antd";
 
 export const DefaultInput = (props: InputProps) => {
-  const { placeholder, label, labelText } = props;
-  if (label) {
-    return (
-      <>
+  const { placeholder, islabel, labeltext, errormsg } = props;
+  return (
+    <>
+      {islabel ? (
         <div className="text-start">
           <label
-            className="relative bottom-1"
-            htmlFor={labelText?.toLowerCase()}
+            className={`relative bottom-1 w-[100px] ${
+              errormsg && "text-red-500"
+            }`}
+            htmlFor={labeltext?.toLowerCase()}
           >
-            {labelText}
+            {errormsg ? errormsg : labeltext}
           </label>
-          <Input name={labelText?.toLowerCase()} {...props} />
+          <Input
+            className={`${errormsg && "border-red-300"}`}
+            name={labeltext?.toLowerCase()}
+            {...props}
+          />
         </div>
-      </>
-    );
-  }
-  return <Input placeholder={placeholder} {...props} />;
+      ) : (
+        <Input placeholder={placeholder} {...props} />
+      )}
+    </>
+  );
 };
