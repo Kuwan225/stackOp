@@ -8,7 +8,7 @@ import "./App.css";
 const router = createBrowserRouter(pages as any);
 
 function App() {
-  const [isLogin, setIsLogin] = useState<boolean>(false);
+  const [isLogin, setIsLogin] = useState<boolean>(true);
   return <>{isLogin ? <RouterProvider router={router} /> : <Login />}</>;
 }
 

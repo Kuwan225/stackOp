@@ -6,9 +6,41 @@
   font-family: 'Laila', sans-serif;
 }
 
+:root {
+  --primaryColor: #71492E;
+}
+
 :where(.css-dev-only-do-not-override-ed5zg0).ant-btn-primary:not(:disabled):hover {
   background-color: #b38668;
 }
+:where(.css-dev-only-do-not-override-ed5zg0).ant-btn-link:not(:disabled):hover {
+  color: var(--primaryColor);
+}
+
+
+
+sup.ant-scroll-number.ant-badge-count {
+  min-width: 15px;
+  height: 15px;
+  font-size: 10px;
+  line-height: 17px;
+  transform: translateX(-0px);
+  background: var(--primaryColor);
+  color: white;
+}
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-btn-link {
+  color: var(--primaryColor);
+}
+
+.ant-dropdown {
+  width: 276px;
+}
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-dropdown .ant-dropdown-menu, :where(.css-dev-only-do-not-override-ed5zg0).ant-dropdown-menu-submenu .ant-dropdown-menu  {
+  padding: 10px 10px;
+}
+
 
 
 

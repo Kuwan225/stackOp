@@ -3,9 +3,11 @@ import { Image as AntImg } from "antd";
 
 const Image = (props: OtherProps) => {
   return (
-    <div>
-      <AntImg preview={false} {...props} />
-    </div>
+    <AntImg
+      preview={false}
+      {...props}
+      className={`shadow-none ${props.className}`}
+    />
   );
 };
 

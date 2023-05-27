@@ -1,13 +1,11 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
+import Header from "./Header/Header";
 
 const Main = () => {
   return (
     <>
-      <div style={{ display: "flex" }}>
-        <Link to={"/contact"}>Contact</Link>
-        <Link to={"/"}>Home</Link>
-      </div>
+      <Header />
       <Suspense fallback={<h1>Loading...</h1>}>
         <Outlet />
       </Suspense>

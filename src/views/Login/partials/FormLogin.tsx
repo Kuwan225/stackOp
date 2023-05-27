@@ -5,7 +5,7 @@ import { Formik, Form } from "formik";
 import Logo from "/public/logo/e_logo.png";
 import Text from "../../../components/text";
 import { DefaultInput } from "../../../components/Form/inputs";
-import { BtnSubmit } from "../../../components/buttons";
+import { PrimaryBtn } from "../../../components/buttons";
 import { LoginModel } from "../../../mutations/types/Login.type";
 import LoginValidationSchema from "../../../mutations/validations/LoginValidationSchema";
 
@@ -66,7 +66,7 @@ const FormLogin = () => {
                       onChange={handleChange}
                       errormsg={touched.password && errors.password}
                     />
-                    <BtnSubmit>Daftar</BtnSubmit>
+                    <PrimaryBtn>Daftar</PrimaryBtn>
                   </Space>
                 </Form>
               );

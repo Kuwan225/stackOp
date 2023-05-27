@@ -27,3 +27,11 @@ export const DefaultInput = (props: InputProps) => {
     </>
   );
 };
+
+export const InputSearch = (props: InputProps) => {
+  return (
+    <>
+      <Input {...props} />
+    </>
+  );
+};
