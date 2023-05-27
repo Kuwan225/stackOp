@@ -1,19 +1,25 @@
-import { useState } from "react";
+import { NovelCard } from "../../components/cards";
+import { Layout, Space } from "antd";
+import SampleBook from "/img/sampleBook.png";
+import Container from "../../components/container";
 
 const Home = () => {
-  const [num, setNum] = useState(0);
   return (
-    <div>
-      <h1>Hello</h1>
-      <h1>{num}</h1>
-      <button
-        onClick={() => {
-          setNum((prev) => prev + 1);
-        }}
-      >
-        Add
-      </button>
-    </div>
+    <Layout className="min-h-screen bg-[#F2F2F2]">
+      <Container>
+        <Space direction="horizontal" size={"large"} align="start">
+          <NovelCard
+            linkTo={"#"}
+            src={SampleBook}
+            author="Author"
+            novelTitle="Harry Potter"
+            price={200000}
+          />
+          <NovelCard linkTo={"#"} src={SampleBook} />
+          <NovelCard linkTo={"#"} src={SampleBook} />
+        </Space>
+      </Container>
+    </Layout>
   );
 };
 

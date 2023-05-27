@@ -8,6 +8,7 @@
 
 :root {
   --primaryColor: #71492E;
+  --bgColor: #F2F2F2;
 }
 
 :where(.css-dev-only-do-not-override-ed5zg0).ant-btn-primary:not(:disabled):hover {
@@ -39,6 +40,15 @@ sup.ant-scroll-number.ant-badge-count {
 
 :where(.css-dev-only-do-not-override-ed5zg0).ant-dropdown .ant-dropdown-menu, :where(.css-dev-only-do-not-override-ed5zg0).ant-dropdown-menu-submenu .ant-dropdown-menu  {
   padding: 10px 10px;
+}
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-card .ant-card-body {
+  padding: 17px;
+  border-radius: 20px;
+}
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-divider-horizontal {
+  min-width: 50%;
 }
 
 

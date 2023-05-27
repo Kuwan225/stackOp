@@ -6,7 +6,7 @@ import Actions from "./Partials/Actions";
 const Header = () => {
   const { Header } = Layout;
   return (
-    <Header className="bg-white flex items-center justify-between">
+    <Header className="flex items-center justify-between bg-[#F2F2F2]">
       <Leading />
       <InputSearch
         placeholder="Search..."
