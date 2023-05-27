@@ -6,7 +6,7 @@ import Container from "../../components/container";
 const Home = () => {
   return (
     <Layout className="min-h-screen bg-[#F2F2F2]">
-      <Container>
+      <Container className="flex justify-center text-start">
         <Space direction="horizontal" size={"large"} align="start">
           <NovelCard
             linkTo={"#"}
