@@ -4,6 +4,11 @@ import "./App.css";
 import { useState } from "react";
 import "./App.css";
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
 const router = createBrowserRouter(pages as any);
 
 function App() {

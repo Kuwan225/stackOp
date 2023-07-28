@@ -1,58 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Josefin+Slab:wght@700&family=Kufam:wght@400;500;600;700;800;900&family=Laila:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Josefin+Slab:wght@700&family=Kufam:wght@400;500;600;700;800;900&family=Laila:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Laila', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 :root {
-  --primaryColor: #71492E;
-  --bgColor: #F2F2F2;
+  --primaryColor: #71492e;
+  --bgColor: #f2f2f2;
 }
 
-:where(.css-dev-only-do-not-override-ed5zg0).ant-btn-primary:not(:disabled):hover {
-  background-color: #b38668;
+/* custom antd */
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-select:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  width: 207px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #0466c8cc;
 }
-:where(.css-dev-only-do-not-override-ed5zg0).ant-btn-link:not(:disabled):hover {
-  color: var(--primaryColor);
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-picker {
+  height: 40px;
+  border: 1px solid #0466c8cc;
 }
 
+:where(.css-dev-only-do-not-override-ed5zg0).ant-picker .ant-picker-suffix,
+:where(.css-dev-only-do-not-override-ed5zg0).ant-picker
+  .ant-picker-input
+  > input,
+:where(.css-dev-only-do-not-override-ed5zg0).ant-picker
+  .ant-picker-input
+  > input::placeholder {
+  color: #0466c8cc;
+}
+:where(.css-dev-only-do-not-override-ed5zg0).ant-picker
+  .ant-picker-input
+  > input {
+  width: 170px;
+}
 
+:where(.css-dev-only-do-not-override-ed5zg0).ant-modal .ant-modal-close {
+  display: none;
+}
+/* tabel custom */
 
-sup.ant-scroll-number.ant-badge-count {
-  min-width: 15px;
+#container-table table,
+#container-table-add table {
+  border-radius: 0%;
+}
+
+#container-table thead tr th,
+#container-table-add thead tr th {
+  color: #195a89;
+  border-top: 3px solid #195a89;
+  border-bottom: 3px solid #195a89;
+  border-radius: 0;
+  background-color: white;
+  font-size: 20px;
+}
+
+#container-table td,
+#container-table-add td {
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid black;
+}
+
+#container-table-add .ant-table-cell:nth-child(3) {
+  text-align: center;
+}
+#container-table .ant-table-cell:nth-child(7) {
+  text-align: center;
+}
+
+/* antd pagination */
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  width: 20px;
+}
+
+.swiper-horizontal > .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  width: 40px;
   height: 15px;
-  font-size: 10px;
-  line-height: 17px;
-  transform: translateX(-0px);
-  background: var(--primaryColor);
-  color: white;
+  border-radius: 10px;
+  background-color: #195a89;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background: #195A8980;
+
 }
 
-:where(.css-dev-only-do-not-override-ed5zg0).ant-btn-link {
-  color: var(--primaryColor);
+/* antd modal login */
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-modal .ant-modal-footer{
+  text-align: center;
+  display: flex;
 }
-
-.ant-dropdown {
-  width: 276px;
+:where(.css-dev-only-do-not-override-ed5zg0).ant-modal .ant-modal-footer :where(.css-dev-only-do-not-override-ed5zg0).ant-btn-default{
+  width: 100%;
 }
-
-:where(.css-dev-only-do-not-override-ed5zg0).ant-dropdown .ant-dropdown-menu, :where(.css-dev-only-do-not-override-ed5zg0).ant-dropdown-menu-submenu .ant-dropdown-menu  {
-  padding: 10px 10px;
+:where(.css-dev-only-do-not-override-ed5zg0).ant-modal .ant-modal-footer :where(.css-dev-only-do-not-override-ed5zg0).ant-btn-primary{
+  width: 100%;
 }
-
-:where(.css-dev-only-do-not-override-ed5zg0).ant-card .ant-card-body {
-  padding: 17px;
-  border-radius: 20px;
-}
-
-:where(.css-dev-only-do-not-override-ed5zg0).ant-divider-horizontal {
-  min-width: 50%;
-}
-
-
-
-
-
-

@@ -1,7 +1,11 @@
 import { Typography } from "antd";
 import { TextProps } from "./types/text.type";
 
-export default function Text({ children, className }: TextProps) {
+const Text = (props: TextProps) => {
+const { children, className,style } = props
+
   const { Text } = Typography;
-  return <Text className={`font-laila ${className!}`}>{children}</Text>;
+  return <Text className={`font-Montserrat ${className!}`} style={style}>{children}</Text>;
 }
+
+export default Text

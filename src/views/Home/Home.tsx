@@ -1,12 +1,12 @@
 import { Layout } from "antd";
-import Text from "../../components/text";
+import CarouselInfo from "./Partials/CarouselInfo";
+import TableRecent from "./Partials/TableRecent";
 
 const Home = () => {
   return (
-    <Layout className="min-h-screen bg-black flex item-center justify-center min-w-full">
-      <div className="flex justify-center">
-        <Text className="text-white font-bold text-3xl">Happy Coding :)</Text>
-      </div>
+    <Layout className="min-h-screen bg-[#F3F3F3] flex min-w-full">
+    <CarouselInfo/>
+    <TableRecent/>
     </Layout>
   );
 };
