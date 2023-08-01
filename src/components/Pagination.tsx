@@ -3,14 +3,14 @@ import Button from "./Button";
 import Text from './text';
 import { useEffect, useState } from 'react';
 
-export const Page =({pages,setActive,setOpenPop}:any)=>{
+export const Page =({pages,setActive,setOpenPop,active}:any)=>{
 return (
 <div className='flex flex-col gap-2'>
-   {pages.map((el:any)=>(
+   {pages?.map((el:number)=>(
      <Button key={el} type='default' onClick={()=>{
         setActive(el)
         setOpenPop(false)
-     }}>{el}</Button>
+     }} className={`${el == active && 'bg-blue-500 text-white'}`}>{el}</Button>
    ))}
 </div>
 )
@@ -31,8 +31,7 @@ const Pagination = ({data}:{data:any}) => {
 
   return (
     <div className="flex items-center gap-4">
-        <Popover open={isOpenPop} placement="top" title={"Page"} content={<Page pages={pages} setActive={setActive} setOpenPop={setIsOpenPop}/>} trigger="click">
-
+        <Popover open={isOpenPop} placement="top" title={"Page"} content={<Page pages={pages} setActive={setActive} active={active} setOpenPop={setIsOpenPop}/>} trigger="click">
         <Button type="default" className="px-8" onClick={()=>setIsOpenPop(true)}>
           Page
         </Button>

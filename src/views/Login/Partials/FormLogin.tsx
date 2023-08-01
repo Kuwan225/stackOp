@@ -12,10 +12,10 @@ const FormLogin = () => {
       </div>
       <Text className="text-[#195A89] font-[Montserrat] font-bold text-[32px]">Welcome</Text>
       <form className="flex flex-col gap-6">
-        <Input showLabel label="Username" placeHolder="Username"/>
-        <Input showLabel label="Password" placeHolder="Password"/>
+        <Input.Default type="text" placeHolder="Username" className="py-3 px-6 text-xl"/>
+        <Input.Default type="password" placeHolder="Password" className="py-3 px-6 text-xl"/>
         <Link to={"forgot_password"} className="no-underline"><Text className="text-right block text-[18px] font-[600]">Forgot Password!</Text></Link>
-        <Button/>
+        <Button className="py-3 text-xl font-semibold mt-6">Login</Button>
       </form>
     </div>
   );

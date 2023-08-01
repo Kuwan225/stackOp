@@ -43,20 +43,20 @@ const Filter = () => {
       >
         <div className="flex justify-between gap-8">
           <div className="w-full flex flex-col gap-4">
-            <Input.Input
+            <Input.Default
             type="number"
               placeHolder="Kode"
               className="h-[40px] py-[8px] px-[13px] w-full text-[16px]"
             />
-            <InputSelect />
-            <InputSelect />
+            <InputSelect onChange={""} />
+            <InputSelect onChange={""} />
           </div>
           <div className="w-full flex flex-col gap-4">
-            <Input.Input placeHolder="Quantity" 
+            <Input.Default placeHolder="Quantity" 
             type="text"
               className="h-[40px] py-[8px] px-[13px] w-full text-[16px]"
               />
-            <InputDate />
+            <InputDate onChange={""} />
           </div>
         </div>
       </Modal>

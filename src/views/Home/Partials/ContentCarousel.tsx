@@ -4,12 +4,20 @@ import { AiOutlineLogin } from "react-icons/ai";
 import Text from "../../../components/text";
 import Button from "../../../components/Button";
 import { DatePicker, DatePickerProps } from "antd";
+import { useState } from "react";
 
 const ContentCarousel = (props: any) => {
 
+  const month = new Date().getMonth()
+  const  year= new Date().getFullYear()
+  
+
+const [date,setDate] = useState(`${year}-${month}`)
+
   const changeDate: DatePickerProps['onChange'] = (date, dateString) => {
-    const dated = moment(dateString).format("LL")
-    console.log(dated)
+    // const dated = moment(dateString).format("LLL")
+    // console.log(dateString)
+    setDate(dateString)
 
   }
   return (
@@ -43,7 +51,7 @@ const ContentCarousel = (props: any) => {
 
       <div className="absolute bottom-0 bg-[#195A89] w-full h-[40px]">
         <Button className="flex justify-center rounded-none items-center  w-full bg-[#195A89]">
-          <Text className="text-white text-[17px] font-[400]">hehe</Text>
+          <Text className="text-white text-[17px] font-[400]">{date}</Text>
           <div className="text-white absolute right-[40px] text-[18px]">
             <BiSolidDownArrow />
           </div>

@@ -90,6 +90,7 @@ setData([...data,newData])
           <Popconfirm
             title="Sure to save?"
             onConfirm={handleSave}
+            className="w-full"
           >
             Submit
           </Popconfirm>
@@ -101,6 +102,7 @@ setData([...data,newData])
               setModalOpen(false);
               setDataSource([]);
             }}
+            className="w-full"
           >
             Cancel
           </Popconfirm>

@@ -1,4 +1,5 @@
 import { BiSolidDownArrow } from "react-icons/bi";
+import { GoKebabHorizontal } from "react-icons/go";
 import { Popover, Table } from "antd";
 import type { ColumnsType } from "antd/es/table";
 
@@ -10,16 +11,22 @@ import Button from "../../../components/Button";
 import { ReactNode, useState } from "react";
 import Pagination from "../../../components/Pagination";
 
-export const NamaBarang = ()=>{
-  return(
+export const NamaBarang = () => {
+  return (
     <div className="flex items-center gap-4">
       <span>Basreng</span>
-      <Popover trigger={"hover"} title="Nama Barang" placement="bottomRight" content="coba" className="cursor-pointer">
-      <span>hover</span>
+      <Popover
+        trigger={"hover"}
+        title="Nama Barang"
+        placement="bottomRight"
+        content="coba"
+        className="cursor-pointer"
+      >
+        <GoKebabHorizontal />
       </Popover>
     </div>
-  )
-}
+  );
+};
 
 interface DataType {
   key: React.Key;
@@ -57,7 +64,7 @@ const data: DataType[] = [
   {
     key: "1",
     kode: 5643,
-    nama_barang: <NamaBarang/>,
+    nama_barang: <NamaBarang />,
     supplier: "Marwan",
     quantity: 15,
     tanggal: "2023/18/juli",
@@ -109,7 +116,7 @@ const TableData = () => {
 
       {/* Pagination */}
       <div className="pt-4 pl-4 flex justify-between items-center">
-        <Pagination data={data}/>
+        <Pagination data={data} />
         <Button type="default" className="border-none ">
           <Text className="text-[#195A89] text-[19px]">Detail</Text>
         </Button>
